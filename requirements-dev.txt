@@ -1,0 +1,11 @@
+-r requirements.txt
+streamlit>=1.40
+pandas
+requests
+reportlab
+pytest
+httpx
+nbformat
+nbconvert
+ipykernel
+ruff
