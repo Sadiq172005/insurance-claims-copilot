@@ -1,0 +1,8 @@
+*.ipynb
+__pycache__
+.env
+data/faiss_index
+samples
+.github
+deploy
+*.egg-info
