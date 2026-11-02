@@ -1,0 +1,79 @@
+{
+  "_note": "SYNTHETIC policy master (demo). In production this comes from the insurer/TPA policy administration system or API. Never commit real customer data.",
+  "network_hospitals": [
+    "Sunrise Multispeciality Hospital",
+    "Deccan Care Hospital",
+    "Godavari Medical Centre",
+    "Charminar Heart Institute"
+  ],
+  "specific_diseases": [
+    {"name": "Cataract", "icd": ["H25", "H26", "H28"], "keywords": ["cataract", "phaco"]},
+    {"name": "Hernia", "icd": ["K40", "K41", "K42", "K43", "K44", "K45", "K46"], "keywords": ["hernia", "hernioplasty"]},
+    {"name": "Joint replacement (non-accidental)", "icd": ["M16", "M17"], "keywords": ["knee replacement", "hip replacement", "arthroplasty"]},
+    {"name": "Kidney / gall bladder stones", "icd": ["N20", "K80"], "keywords": ["calculus", "cholelithiasis", "renal stone"]},
+    {"name": "Benign prostatic hyperplasia", "icd": ["N40"], "keywords": ["prostatic hyperplasia", "turp"]}
+  ],
+  "exclusions": [
+    {"name": "Cosmetic / plastic surgery (not for reconstruction after accident/burns/cancer)", "clause": "Excl. 08 Cosmetic or plastic surgery", "icd": ["Z41.1"], "keywords": ["cosmetic", "rhinoplasty", "liposuction", "aesthetic"], "unless_accident": true},
+    {"name": "Infertility / sterility treatment", "clause": "Excl. 17 Sterility and infertility", "icd": ["N97", "Z31"], "keywords": ["ivf", "infertility", "in vitro"]},
+    {"name": "Dental treatment (non-accidental, non-hospitalisation)", "clause": "Excl. 12 Dental", "icd": ["K02", "K03", "K04", "K05", "K08"], "keywords": ["dental", "root canal"], "unless_accident": true},
+    {"name": "Spectacles, contact lenses, hearing aids", "clause": "Excl. 15 Refractive error", "icd": ["H52"], "keywords": ["spectacles", "contact lens", "lasik"]},
+    {"name": "Unproven / experimental treatment", "clause": "Excl. 10 Unproven treatments", "keywords": ["experimental", "unproven"]}
+  ],
+  "policies": {
+    "HLT/2023/000101": {
+      "product": "Arogya Plus Family Floater",
+      "holder": "Ramesh Kumar",
+      "policy_start": "2026-04-01", "policy_end": "2027-03-31", "first_inception": "2023-04-01",
+      "sum_insured": 500000, "claims_paid": 0,
+      "room_rent_limit_pct": 1, "icu_limit_pct": 2, "proportionate_deduction": true,
+      "copay_pct": 0, "consumables_cover": false,
+      "initial_waiting_days": 30, "ped_waiting_months": 36, "specific_disease_waiting_months": 24,
+      "intimation_days": 1, "submission_days": 30,
+      "members": [
+        {"name": "Ramesh Kumar", "relation": "self", "age": 52, "ped": [
+          {"name": "Type 2 Diabetes", "icd": ["E11"], "keywords": ["diabetes", "diabetic"]},
+          {"name": "Hypertension", "icd": ["I10", "I11", "I12", "I13", "I15"], "keywords": ["hypertension", "hypertensive"]}]},
+        {"name": "Sunita Kumar", "relation": "spouse", "age": 48, "ped": []},
+        {"name": "Kiran Kumar", "relation": "son", "age": 21, "ped": []}
+      ]
+    },
+    "HLT/2026/000245": {
+      "product": "Arogya Plus Individual",
+      "holder": "Priya Sharma",
+      "policy_start": "2026-09-01", "policy_end": "2027-08-31", "first_inception": "2026-09-01",
+      "sum_insured": 300000, "claims_paid": 0,
+      "room_rent_limit_pct": 1, "icu_limit_pct": 2, "proportionate_deduction": true,
+      "copay_pct": 0, "consumables_cover": false,
+      "initial_waiting_days": 30, "ped_waiting_months": 36, "specific_disease_waiting_months": 24,
+      "intimation_days": 1, "submission_days": 30,
+      "members": [{"name": "Priya Sharma", "relation": "self", "age": 29, "ped": []}]
+    },
+    "HLT/2025/000377": {
+      "product": "Senior Shield",
+      "holder": "Venkat Rao",
+      "policy_start": "2026-01-10", "policy_end": "2027-01-09", "first_inception": "2025-01-10",
+      "sum_insured": 500000, "claims_paid": 0,
+      "room_rent_limit_pct": 1, "icu_limit_pct": 2, "proportionate_deduction": true,
+      "copay_pct": 20, "consumables_cover": false,
+      "initial_waiting_days": 30, "ped_waiting_months": 36, "specific_disease_waiting_months": 24,
+      "intimation_days": 1, "submission_days": 30,
+      "members": [
+        {"name": "Venkat Rao", "relation": "self", "age": 67, "ped": [
+          {"name": "Hypertension", "icd": ["I10", "I11", "I12", "I13", "I15"], "keywords": ["hypertension", "hypertensive"]}]},
+        {"name": "Lakshmi Rao", "relation": "spouse", "age": 63, "ped": []}
+      ]
+    },
+    "HLT/2022/000512": {
+      "product": "Arogya Plus Individual",
+      "holder": "Farhan Ali",
+      "policy_start": "2025-07-01", "policy_end": "2026-06-30", "first_inception": "2022-07-01",
+      "sum_insured": 400000, "claims_paid": 0,
+      "room_rent_limit_pct": 1, "icu_limit_pct": 2, "proportionate_deduction": true,
+      "copay_pct": 0, "consumables_cover": false,
+      "initial_waiting_days": 30, "ped_waiting_months": 36, "specific_disease_waiting_months": 24,
+      "intimation_days": 1, "submission_days": 30,
+      "members": [{"name": "Farhan Ali", "relation": "self", "age": 41, "ped": []}]
+    }
+  }
+}
