@@ -1,0 +1,13 @@
+[
+  {
+    "claim_id": "CLM-2026-004417",
+    "policy_no": "HLT/2023/000101",
+    "patient": "Ramesh Kumar",
+    "admission_date": "2026-05-12",
+    "hospital": "Deccan Care Hospital",
+    "status": "PAID",
+    "paid_amount": 118400,
+    "paid_on": "2026-06-02",
+    "fingerprint": "e15358bf52abe475"
+  }
+]
