@@ -1,0 +1,54 @@
+{
+  "01_clean_cashless_approve.pdf": {
+    "expected_decision": "APPROVE",
+    "expected_flags": "Clean claim, no deductions"
+  },
+  "02_room_rent_proportionate.pdf": {
+    "expected_decision": "PARTIAL_APPROVE",
+    "expected_flags": "ROOM_RENT excess + proportionate deduction (doctor/nursing)"
+  },
+  "03_initial_waiting_reject.pdf": {
+    "expected_decision": "REJECT",
+    "expected_flags": "INITIAL_WAITING (30 days, non-accident)"
+  },
+  "04_ped_waiting_reject.pdf": {
+    "expected_decision": "REJECT",
+    "expected_flags": "PED_WAITING (declared hypertension, 36 months)"
+  },
+  "05_specific_disease_waiting_reject.pdf": {
+    "expected_decision": "REJECT",
+    "expected_flags": "SPECIFIC_DISEASE_WAITING (cataract, 24 months)"
+  },
+  "06_policy_lapsed_reject.pdf": {
+    "expected_decision": "REJECT",
+    "expected_flags": "POLICY_INACTIVE (expired 30-06-2026)"
+  },
+  "07_bill_total_mismatch_query.pdf": {
+    "expected_decision": "QUERY",
+    "expected_flags": "BILL_TOTAL_MISMATCH (items 89,000 vs printed 98,000)"
+  },
+  "08_copay_nonpayable_partial.pdf": {
+    "expected_decision": "PARTIAL_APPROVE",
+    "expected_flags": "20% co-pay + non-payable items (gloves, admission kit, attendant)"
+  },
+  "09_fraud_red_flags_investigate.pdf": {
+    "expected_decision": "INVESTIGATE",
+    "expected_flags": "Early claim + round total + >80% SI + no ROHINI + no doctor reg + high per-day cost"
+  },
+  "10_cosmetic_exclusion_reject.pdf": {
+    "expected_decision": "REJECT",
+    "expected_flags": "EXCLUSION (cosmetic surgery, Excl. 08)"
+  },
+  "11_cashless_non_network_query.pdf": {
+    "expected_decision": "QUERY",
+    "expected_flags": "NON_NETWORK_CASHLESS -> reimbursement route"
+  },
+  "12_duplicate_claim_investigate.pdf": {
+    "expected_decision": "INVESTIGATE",
+    "expected_flags": "Duplicate of already-paid claim + round total + doctor reg missing (+ LATE_SUBMISSION warning)"
+  },
+  "13_scanned_clean_approve.pdf": {
+    "expected_decision": "APPROVE",
+    "expected_flags": "OCR path (image-only PDF)"
+  }
+}
